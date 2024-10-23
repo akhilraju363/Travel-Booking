@@ -3,6 +3,7 @@ package com.serviceImpl;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,41 +13,43 @@ import com.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
+	
+	  @Autowired
+	    private UserRepository userRepository;
+	
+	org.slf4j.Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    @Autowired
-    private UserRepository userRepository;
+	@Override
+	public User createUser(User user) throws Exception {
+		Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
+		if(existingUser.isPresent()) {
+			throw new  	Exception("Email alredly in use");
+		}
+		// TODO Auto-generated method stub
+		return userRepository.save(user);
+	}
 
-    public User createUser(User user) {
-        return userRepository.save(user);
-    }
+	@Override
+	public List<User> getAllUsers() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-    public User getUserById(Long id) {
-        return userRepository.findById(id).orElse(null);
-    }
+	@Override
+	public User getUserById(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
+	@Override
+	public User updateUser(Integer id, User userDetails) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-    public Optional<User> getUserByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
-
-    public User updateUser(Long id, User userDetails) {
-        return userRepository.findById(id).map(user -> {
-            user.setFirstName(userDetails.getFirstName());
-            user.setLastName(userDetails.getLastName());
-            user.setEmail(userDetails.getEmail());
-            user.setPassword(userDetails.getPassword());
-            return userRepository.save(user);
-        }).orElse(null);
-    }
-
-    public boolean deleteUser(Long id) {
-        return userRepository.findById(id).map(user -> {
-            userRepository.delete(user);
-            return true;
-        }).orElse(false);
-    } 
-
+	@Override
+	public boolean deleteUser(Integer id) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

@@ -1,5 +1,6 @@
 package com.Entity;
 
+ 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,10 +14,20 @@ public class User {
 
 	 @Id
 	 @GeneratedValue (strategy = GenerationType.AUTO)
-	 private Long id;
+	 private Integer id;
+	 
+	 
+	    @Column(name = "first_name")
 	    private String firstName;
+	   
+	    @Column(name = "last_name")
 	    private String lastName;
+	    
+	    
+	    @Column(name = "email")
 	    private String email;
+	    
+	    @Column(name = "Password")
 	    private String password;
 
 	    // Default constructor
@@ -31,11 +42,11 @@ public class User {
 	    }
 
 	    // Getters and Setters
-	    public Long getId() {
+	    public int getId() {
 	        return id;
 	    }
 
-	    public void setId(Long id) {
+	    public void setId(Integer id) {
 	        this.id = id;
 	    }
 

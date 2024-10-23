@@ -2,8 +2,10 @@ package com.controller;
 
 import java.util.List;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,9 +26,11 @@ public class UserController {
 
 	@Autowired
     public UserService userService;
+	
+	org.slf4j.Logger log = LoggerFactory.getLogger(UserController.class);
 
     // Create a new user
-    @PostMapping
+    @PostMapping(value = "/createUser", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> createUser(@RequestBody User user) throws Exception {
         User createdUser = userService.createUser(user);
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
@@ -34,7 +38,7 @@ public class UserController {
 
     // Get a user by ID
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) throws Exception {
+    public ResponseEntity<User> getUserById(@PathVariable Integer id) throws Exception {
         User user = userService.getUserById(id);
         return user != null ? new ResponseEntity<>(user, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
@@ -48,14 +52,14 @@ public class UserController {
 
     // Update an existing user
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) throws Exception {
+    public ResponseEntity<User> updateUser(@PathVariable Integer id, @RequestBody User userDetails) throws Exception {
         User updatedUser = userService.updateUser(id, userDetails);
         return updatedUser != null ? new ResponseEntity<>(updatedUser, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     // Delete a user by ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus> deleteUser(@PathVariable Long id) throws Exception {
+    public ResponseEntity<HttpStatus> deleteUser(@PathVariable Integer id) throws Exception {
         boolean isDeleted = userService.deleteUser(id);
         return isDeleted ? new ResponseEntity<>(HttpStatus.NO_CONTENT) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     } 

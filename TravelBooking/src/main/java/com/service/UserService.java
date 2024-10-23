@@ -11,7 +11,7 @@ public interface UserService {
 		//return null;
 	
 
-	public User getUserById(Long id)  throws Exception;
+	public User getUserById(Integer id)  throws Exception;
 		// TODO Auto-generated method stub
 	//	return null;
 	
@@ -21,12 +21,12 @@ public interface UserService {
 	//	return null;
 	
 
-	public User updateUser(Long id, User userDetails) throws Exception;
+	public User updateUser(Integer id, User userDetails) throws Exception;
 		// TODO Auto-generated method stub
 	//	return null;
 	
 
-	public boolean deleteUser(Long id) throws Exception;
+	public boolean deleteUser(Integer id) throws Exception;
 		// TODO Auto-generated method stub
 	//	return false;
 	
