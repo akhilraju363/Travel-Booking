@@ -731,3 +731,11 @@ header .search-bar-container label:hover{
         width: 100%;
     }
 }
+
+.button-container {
+    text-align: center;
+}
+
+.button-container .btn {
+    margin: 0 10px;
+}
