@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&family=Poppins:wght@200;300;400;600;700&display=swap');
 :root{
     --orange:#ffa500;
@@ -83,7 +82,8 @@ header .search-bar-container{
     background: #333;
     border-top: .1rem solid rgba(255,255,255,.2);
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Ensure items stack vertically */
+    align-items: center; /* Center items horizontally */
     z-index: 1001;
     clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
 }
@@ -108,6 +108,96 @@ header .search-bar-container label:hover{
     color: greenyellow
 }
 
+.register-form{
+    position: fixed;
+    top: -120%;
+    left: 0%;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10000;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rigister-form.active{
+    top: 0%;
+}
+.register-form form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: white;
+    width: 50rem;
+
+}
+.register-form form h2{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+.btn{
+    margin-top: 1rem;
+    background-color: greenyellow;
+    padding: .8rem 3rem;
+    font-size: 2rem;
+    border: 1px solid greenyellow;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+.btn:hover{
+    background-color: white;
+    color: green;
+    text-decoration: underline;
+}
+.register-form form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border:0.1rem solid rgba(0,0,0,0.3);
+    text-transform: none;
+
+}
+.register-form form .box:focus{
+    border-color: greenyellow;
+}
+.register-form form #remember{
+    margin: 2rem 0;
+}
+.register-form form label{
+    font-size: 1.5rem;
+}
+.register-form form .btn{
+    display: block;
+    width: 100%;
+}
+.register-form form p{
+    padding: .5rem 0;
+    font-size: 1.5rem ;
+    color: #444;
+}
+.register-form form p a{
+    color: green;
+    text-decoration: none;
+}
+.register-form form p a:hover{
+    color:blue;
+    text-decoration: underline;
+}
+.register-form #form-close{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
 
 .login-form{
     position: fixed;
