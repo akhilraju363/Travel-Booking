@@ -82,5 +82,6 @@ var swiper = new Swiper(".brand-slider", {
             slidesPerView:5,
         },
     },
+    
 
 });
