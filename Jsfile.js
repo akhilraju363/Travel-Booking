@@ -81,6 +81,43 @@ var swiper = new Swiper(".brand-slider", {
         1200: {
             slidesPerView:5,
         },
-    },
-
+    }
 });
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function validatePassword(password) {
+    const re = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return re.test(password);
+}
+
+function runTests() {
+    const emailTests = [
+        { input: "test@example.com", expected: true },
+        { input: "invalid-email", expected: false },
+        { input: "test@.com", expected: false },
+        { input: "test@domain", expected: false }
+    ];
+
+    const passwordTests = [
+        { input: "Password1!", expected: true },
+        { input: "password", expected: false },
+        { input: "PASSWORD1", expected: false },
+        { input: "Pass1", expected: false }
+    ];
+
+    emailTests.forEach(test => {
+        const result = validateEmail(test.input);
+        console.assert(result === test.expected, `Email Test Failed: ${test.input}`);
+    });
+
+    passwordTests.forEach(test => {
+        const result = validatePassword(test.input);
+        console.assert(result === test.expected, `Password Test Failed: ${test.input}`);
+    });
+
+    alert("Tests completed. Check console for results.");
+}
