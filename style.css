@@ -16,7 +16,7 @@
     transition: all .2s linear;
 }
 ::selection{
-    background-color: greenyellow;
+    background-color: orange;
     color: white;
 }
 html{
@@ -49,7 +49,7 @@ header .logo{
 }
 header .logo span{
 /*     color: var(--orange); */
-    color: greenyellow;
+    color: orange;
 }
 header .navbar a{
     text-decoration: none;
@@ -59,7 +59,7 @@ header .navbar a{
     
 }
 header .navbar a:hover{
-    color: greenyellow;
+    color: orange;
     transition: linear;
     transition-duration: .5s;
 
@@ -72,7 +72,7 @@ header .icons i{
 
 }
 header .icons i:hover{
-    color: greenyellow
+    color: orange
 }
 
 header .search-bar-container{
@@ -105,7 +105,7 @@ header .search-bar-container label{
     margin-left: 1.5rem;
 }
 header .search-bar-container label:hover{
-    color: greenyellow
+    color: orange
 }
 
 .register-form{
@@ -141,17 +141,18 @@ header .search-bar-container label:hover{
 }
 .btn{
     margin-top: 1rem;
-    background-color: greenyellow;
+    background-color: orange;
     padding: .8rem 3rem;
     font-size: 2rem;
-    border: 1px solid greenyellow;
+    border: 1px solid orange;
     cursor: pointer;
     text-decoration: none;
     border-radius: .5rem;
 }
 .btn:hover{
     background-color: white;
-    color: green;
+    /* color: green; */
+    color: orange;
     text-decoration: underline;
 }
 .register-form form .box{
@@ -165,7 +166,7 @@ header .search-bar-container label:hover{
 
 }
 .register-form form .box:focus{
-    border-color: greenyellow;
+    border-color: orange;
 }
 .register-form form #remember{
     margin: 2rem 0;
@@ -183,7 +184,8 @@ header .search-bar-container label:hover{
     color: #444;
 }
 .register-form form p a{
-    color: green;
+    /* color: green; */
+    color: orange;
     text-decoration: none;
 }
 .register-form form p a:hover{
@@ -231,17 +233,18 @@ header .search-bar-container label:hover{
 }
 .btn{
     margin-top: 1rem;
-    background-color: greenyellow;
+    background-color: orange;
     padding: .8rem 3rem;
     font-size: 2rem;
-    border: 1px solid greenyellow;
+    border: 1px solid orange;
     cursor: pointer;
     text-decoration: none;
     border-radius: .5rem;
 }
 .btn:hover{
     background-color: white;
-    color: green;
+    /* color: green; */
+    color:orange;
     text-decoration: underline;
 }
 .login-form form .box{
@@ -255,7 +258,7 @@ header .search-bar-container label:hover{
 
 }
 .login-form form .box:focus{
-    border-color: greenyellow;
+    border-color: orange;
 }
 .login-form form #remember{
     margin: 2rem 0;
@@ -273,7 +276,8 @@ header .search-bar-container label:hover{
     color: #444;
 }
 .login-form form p a{
-    color: green;
+    /* color: green; */
+    color: orange;
     text-decoration: none;
 }
 .login-form form p a:hover{
@@ -354,7 +358,7 @@ header .search-bar-container label:hover{
 
 }
 .home .controls .vid-btn.active{
-    background-color: greenyellow;
+    background-color: orange;
 }
 .heading{
     text-align: center;
@@ -363,7 +367,8 @@ header .search-bar-container label:hover{
 .heading span{
     font-size: 3.5rem;
     background: rgba(241, 182, 71, 0.2);
-    color: rgb(108, 173, 10);
+    /* color: rgb(108, 173, 10); */
+    color: orange;
     border-radius: .5rem ;
     padding: .2rem 1rem;
 }
@@ -457,7 +462,8 @@ header .search-bar-container label:hover{
     color: #333;
 }
 .packages .box-container .box .content h3 i{
-    color: rgb(126, 204, 10);
+    /* color: rgb(126, 204, 10); */
+    color: orange
 }
 .packages .box-container .box .content p{
     font-size: 1.7rem;
@@ -465,7 +471,8 @@ header .search-bar-container label:hover{
     padding: 1rem 0;
 }
 .packages .box-container .box .content .stars i{
-    color: rgb(126, 204, 10);
+    /* color: rgb(126, 204, 10); */
+    color: orange;
     font-size: 1.7rem;
 }
 .packages .box-container .box .content .price{
@@ -494,7 +501,7 @@ header .search-bar-container label:hover{
 .services .box-container .box i{
     padding: 1rem;
     font-size: 5rem;
-    color: greenyellow;
+    color: orange;
 }
 .services .box-container .box h3{
     font-size: 2.5rem;
@@ -544,7 +551,7 @@ header .search-bar-container label:hover{
 
 .gallery .box-container .box .content h3{
     font-size: 2.5rem;
-    color: greenyellow;
+    color: orange;
 }
 .gallery .box-container .box .content p{
     font-size: 1.4rem;
@@ -580,7 +587,8 @@ header .search-bar-container label:hover{
     padding: 1rem o;
 }
 .review .box .stars i{
-    color: green;
+    /* color: green; */
+    color: orange;
     font-size: 1.5rem;   
 }
 .contact .row{
@@ -659,7 +667,7 @@ header .search-bar-container label:hover{
     color: whitesmoke;
 }
 .footer .box-container .box a:hover{
-    color: greenyellow;
+    color: orange;
     text-decoration: underline;
 
 }
@@ -673,7 +681,7 @@ header .search-bar-container label:hover{
     border-top: .1rem solid rgba(255,255,255,.2);
 }
 .footer .credit span{
-    color: greenyellow;
+    color: orange;
 }
 
 @media(max-width:1200px){
@@ -732,3 +740,4 @@ header .search-bar-container label:hover{
 .button-container .btn {
     margin: 0 10px;
 }
+
