@@ -1,0 +1,37 @@
+
+<section class="book" id="book">
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+    <div class="row" id="height">
+        <div class="image">
+            <img src="assets/img-3.jpg" alt="" srcset="">
+        </div>
+        <form (ngSubmit)="book()">
+            <div class="inputbox">
+                <h3>Where to</h3>
+                <input type="text" placeholder="place name" [(ngModel)]="booking.place" name="place">
+            </div>
+            <div class="inputbox">
+                <h3>How many</h3>
+                <input type="number" placeholder="number of guests" [(ngModel)]="booking.guests" name="guests">
+            </div>
+            <div class="inputbox">
+                <h3>Arrival</h3>
+                <input type="date" [(ngModel)]="booking.arrival" name="arrival">
+            </div>
+            <div class="inputbox">
+                <h3>Leaving</h3>
+                <input type="date" [(ngModel)]="booking.leaving" name="leaving">
+            </div>
+            <input type="submit" value="book now" class="btn">
+        </form>
+    </div>
+</section>

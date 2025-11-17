@@ -1,0 +1,14 @@
+
+<div class="login-form">
+    <i id="form-close" class="fas fa-times"></i>
+    <form (ngSubmit)="login()">
+        <h2>login</h2>
+        <input type="email" class='box' placeholder="Enter ur email.." [(ngModel)]="credentials.email" name="email">
+        <input type="password" class='box' placeholder="Password.." [(ngModel)]="credentials.password" name="password">
+        <input type="submit" value="login now" class="btn"><br>
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forgot password ? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">Register now</a></p>
+    </form>
+</div>

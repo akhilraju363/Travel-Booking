@@ -1,0 +1,32 @@
+
+.register{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+.register form{
+    padding:2rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    width:50rem;
+}
+.register form .inputbox{
+    padding:.5rem 0;
+}
+.register form .inputbox h3{
+    font-size: 2rem;
+    color:#666;
+    padding:.5rem 0;
+}
+.register form .inputbox input{
+    width:100%;
+    padding:1rem;
+    border:.1rem solid rgba(0,0,0,.1);
+    font-size: 1.7rem;
+    color:#333;
+    text-transform: none;
+}
